@@ -1,16 +1,13 @@
-import  express  from 'express'
-import  usuarioRoutes from "./routes/usuarioRoutes.js"
 
-const app = express ()
+import express from "express"
+import usuarioRoutes from "./routes/usuarioRoutes.js"
 
-//rounting 
-app.use(' / ', usuarioRoutes)
+const app = express()
 
 
-// definir el puerto
+app.use('/' , usuarioRoutes)
 
-const port = 3000;
-
+const port = 3001;
 app.listen(port, () => {
     console.log(`el servidor esta corriendo en el puerto ${port}`)
 });
